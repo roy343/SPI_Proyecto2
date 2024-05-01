@@ -7,23 +7,17 @@ module pwm_alu (
 
 // Contador de ciclo de trabajo
 reg [3:0] counter;
+reg [3:0] counter_next;
 
+// Lógica de contador
 always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        counter <= 0;
-        pwm <= 0;
-    end else begin
-        if (counter < alu_out) begin
-            pwm <= 1;
-        end else begin
-            pwm <= 0;
-        end
-        if (counter == 15) begin
-            counter <= 0;
-        end else begin
-            counter <= counter + 1;
-        end
-    end
+    counter <= (rst & ~clk) ? 4'b0000 : counter_next;
+end
+
+// Lógica de PWM
+always @(*) begin
+    counter_next = counter + 1;
+    pwm = (counter < alu_out) & (~rst);
 end
 
 endmodule

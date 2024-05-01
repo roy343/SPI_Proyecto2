@@ -1,8 +1,8 @@
 module tb_pwm_alu;
 
   // Parámetros de simulación
-  parameter CLK_PERIOD = 50; // Período del reloj en unidades de tiempo de simulación
-  parameter SIM_TIME = 20000;  // Tiempo de simulación total
+  parameter CLK_PERIOD = 10; // Período del reloj en unidades de tiempo de simulación
+  parameter SIM_TIME = 2000;  // Tiempo de simulación total
 
   // Declaraciones de señales
   reg clk = 0;          // Clock
@@ -31,7 +31,7 @@ module tb_pwm_alu;
   // Simular el comportamiento del módulo
   initial begin
     // Valor de entrada de la ALU igual a 6 (40% de ciclo de trabajo)
-    alu_out = 2;
+    alu_out = 4'b1111;
     
     // Iniciar la simulación
     $dumpfile("tb_pwm_alu.vcd"); // Archivo VCD para visualización en waveform
