@@ -9,54 +9,108 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/simulation/modelsim
-vmux_4_1
+vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1714526072
+Z2 !s110 1714601600
 !i10b 1
-!s100 amNZJC4eFjROg8hj[5;Sz0
+!s100 M=iWMQTmF:n7Wdg=5gEoV0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ILP5=:WlTL8WP3Mj]gCe`f1
+I=JiiPKX2YEf]>BQ;[Cf3@2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1714526024
-8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv
-FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv
-!i122 0
-L0 1 9
+w1714601283
+8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU.sv
+FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU.sv
+!i122 1
+L0 1 22
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1714526072.000000
-!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv|
+Z6 !s108 1714601600.000000
+!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU.sv|
 !i113 1
 Z7 o-sv -work work
 Z8 !s92 -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller
 Z9 tCvgOpt 0
-vmux_4_1_tb
+n@a@l@u
+vALU_tb
 R1
 R2
 !i10b 1
-!s100 WODnGJbc>I;1EWHoancSn1
+!s100 fI;QnQkOb0>]ba[NB7;0h2
 R3
-Il0noQeBOf:]bLXKg^ci262
+IeLhUMGhX?Xc:UNWD@71N73
 R4
 S1
 R0
-w1714526032
-8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1_tb.sv
-FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1_tb.sv
-!i122 1
-L0 1 29
+w1714601575
+8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU_tb.sv
+FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU_tb.sv
+!i122 3
+L0 1 34
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1_tb.sv|
+!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u_tb
+vmux_4_1
+R1
+R2
+!i10b 1
+!s100 kalmjZ4S;LARYb;kzIA2<3
+R3
+IaB]NF[d7el4^Bb[j<eF[i0
+R4
+S1
+R0
+w1714586717
+8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv
+FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv
+!i122 0
+L0 1 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv|
+!i113 1
+R7
+R8
+R9
+vmux_4bit
+R1
+R2
+!i10b 1
+!s100 hWd?R:kMz6_nWJcFU:XSn2
+R3
+IK:=A;[m^OLlN24<BcGWPm1
+R4
+S1
+R0
+w1714598756
+8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4bit.sv
+FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4bit.sv
+!i122 2
+L0 1 14
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4bit.sv|
 !i113 1
 R7
 R8

@@ -1,6 +1,6 @@
 module mux_4_1(input logic a,b,c,d,
 					input logic c1,c0,
-					output logic [3:0] z);
+					output logic z);
 					
 
 
