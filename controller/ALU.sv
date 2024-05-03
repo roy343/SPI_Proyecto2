@@ -2,7 +2,7 @@ module ALU(input logic [3:0] a,b,
 			  input logic [1:0] opCode,
 			  output logic [3:0] out);
 			  
-		logic [3:0] and_temp, or_temp,c,d;;
+		logic [3:0] and_temp, or_temp,c,d;
 		logic c1,c0;
 		
 		assign c1 = opCode[1];
