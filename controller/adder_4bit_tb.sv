@@ -9,8 +9,8 @@ module adder_4bit_tb();
 	
 	initial begin 
 	
-	a = 4'b0000;
-	b = 4'b0001;
+	a = 4'b0010;
+	b = 4'b0010;
 	c_in = 1'b0;
 	
 

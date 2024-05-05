@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1714711791
+Z2 !s110 1714870009
 !i10b 1
 !s100 EGXGOTmD6VlR>LBB<1Umb1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1714711791.000000
+Z6 !s108 1714870009.000000
 !s107 C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller|C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder.sv|
 !i113 1
@@ -65,13 +65,13 @@ vadder_4bit_tb
 R1
 R2
 !i10b 1
-!s100 >4ZSbg6?GiUQD5;ZgLL;_0
+!s100 EaUi]VbNUB<Scn<oDOA0H2
 R3
-I6A0]ez]`h0^P`Zm1W75U43
+I9m_eFY93Y8T9lA;g=_`JH0
 R4
 S1
 R0
-w1714711534
+w1714869720
 8C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder_4bit_tb.sv
 FC:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder_4bit_tb.sv
 !i122 2

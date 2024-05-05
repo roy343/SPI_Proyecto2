@@ -1,6 +1,7 @@
 module ALU(input logic [3:0] a,b,
 			  input logic [1:0] opCode,
-			  output logic [3:0] out);
+			  output logic [3:0] out,
+			  output logic carry_out);
 			  
 		logic [3:0] and_temp, or_temp,c,d;
 		logic c1,c0;
@@ -8,10 +9,10 @@ module ALU(input logic [3:0] a,b,
 		assign c1 = opCode[1];
 		assign c0 = opCode[0];
 		
-		//Falta cambiar a estructural
-		assign c = a + b;
-		assign d = a - b;
 		
+		
+		adder_4bit add4bits(a,b,0,c,carry_out);
+		adder_4bit add4bitm(a,~b,0,d,carry_out);
 		
 		assign and_temp = a & b;
 		
