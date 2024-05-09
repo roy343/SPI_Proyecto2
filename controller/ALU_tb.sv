@@ -26,7 +26,7 @@ module ALU_tb();
 	#40
 	
 	a = 4'b0010;
-	b = 4'b0010;
+	b = 4'b0011;
 	opCode = 2'b11;
 	
 	

@@ -45,12 +45,17 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4_1.sv}
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU.sv}
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_4bit.sv}
 vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder.sv}
 vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder_4bit.sv}
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_2_1.sv}
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/mux_2_4bit.sv}
 
-vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/adder_4bit_tb.sv}
+vlog -sv -work work +incdir+C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller {C:/Users/spark/OneDrive/Escritorio/Proyecto/SPI_Proyecto2/controller/ALU_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  adder_4bit_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_tb
 
 add wave *
 view structure
