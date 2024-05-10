@@ -11,21 +11,13 @@ reg [3:0] counter_next;
 
 // Lógica de contador
 always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        counter <= 4'b0000;
-    end else begin
-        counter <= counter_next;
-    end
+    counter <= (rst & ~clk) ? 4'b0000 : counter_next;
 end
 
 // Lógica de PWM
-always @(posedge clk or posedge rst) begin
-    if (rst) begin
-        pwm <= 1'b0;
-    end else begin
-        counter_next = counter + 1;
-        pwm <= (counter < alu_out);
-    end
+always @(*) begin
+    counter_next = counter + 1;
+    pwm = (counter < alu_out) & (~rst);
 end
 
 endmodule
