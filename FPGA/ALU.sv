@@ -1,30 +1,33 @@
-module ALU(
-    input  logic [3:0] a,
-    input  logic [3:0] b,
-    input  logic [1:0] opCode,
-    output logic [3:0] out,
-    output logic carry_out
-);
-
-    logic [3:0] and_temp, or_temp, c, d;
-    logic c1, c0;
-    logic carry_out_add4bits, carry_out_add4bitm;
-
-    assign c1 = opCode[1];
-    assign c0 = opCode[0];
-
-    // Instantiate adders
-    adder_4bit add4bits(a, b, 0, c, carry_out_add4bits);
-    adder_4bit add4bitm(a, ~b, 0, d, carry_out_add4bitm);
-
-    assign and_temp = a & b;
-    assign or_temp = a | b;
-
-    // Mux to select output based on opCode
-    mux_4bit mux4(and_temp, or_temp, c, d, c1, c0, out);
-
-    // The carry_out will be selected based on the opCode
-    mux_2_1 carry_mux (opCode[1], carry_out_add4bits, carry_out_add4bitm, carry_out);
-
-
+module ALU(input logic [3:0] a,b,
+			  input logic [1:0] opCode,
+			  output logic [3:0] out,
+			  output logic N_flag,Z_flag,C_flag,V_flag);
+			  
+		logic [3:0] and_temp, or_temp,b_temp,sum;
+		logic c1,c0,carry_out;
+		
+		assign c1 = opCode[1];
+		assign c0 = opCode[0];
+		
+		
+		mux_2_4bit mux2(b,~b,c0,b_temp);
+		
+		
+		adder_4bit add4bits(a,b_temp,0,sum,carry_out);
+		
+		assign and_temp = a & b;
+		
+		assign or_temp = a | b;
+	
+		mux_4bit mux4(and_temp,or_temp,sum,sum,c1,c0,out);
+		
+		assign N_flag = out[3];
+		
+		assign Z_flag = ~|out;
+		
+		assign C_flag = carry_out|~c1;
+		
+		assign V_flag = (c0^~a[3]^~b[3])|(a[3]^sum[3])|(~c1);
+		
+			  
 endmodule

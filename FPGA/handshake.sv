@@ -2,38 +2,38 @@
 // Estado 0: Esperando conexión del Master
 // Estado 1: Recibe el mensaje
 
-module handshake
-(
-   input  logic    clk,
-   input  logic    rst_l,    
-   input  logic    ready,
-   input  logic    done,
-   output logic start
+module handshake(
+	 input logic clk,
+    input logic rst,
+    input logic master_ready,  // Signal from the master indicating readiness to send data
+    output logic slave_ready    // Signal to the master indicating readiness to receive data
 );
-
-   reg [1:0] state;
-   wire state0, state1, state2;
-   wire reset_trigger;
-
-   assign state0 = (state == 2'b00);
-
-   assign state1 = (state == 2'b01);
-
-   assign state2 = (state == 2'b10);
-
-   // Lógica combinacional para determinar si el reinicio debe ocurrir
-   assign reset_trigger = (!rst_l) | (state2 & !done & !ready);
-
-   always @(posedge clk) begin
-      // Lógica para el estado siguiente
-      state <= (state1 & done) | (state2 & !(ready & state1 & done));
-
-      // Lógica para la señal de inicio
-      start <= state0 & ready;
-
-		if (reset_trigger) begin
-         state <= 2'b00;
-         start <= 1'b0;
-      end
-	end
+    // Internal state variable for the handshake
+    enum logic [1:0] {IDLE, READY} state;
+    
+    // Output initially not ready
+    assign slave_ready = 1'b0;
+    
+    // State machine for the handshake
+    always_ff @(posedge clk, negedge rst) begin
+        if (!rst) begin
+            state <= IDLE;  // Reset state machine
+        end else begin
+            case (state)
+                IDLE: begin
+                    // If master is ready, move to READY state
+                    if (master_ready) begin
+                        state <= READY;
+                    end
+                end
+                READY: begin
+                    // Stay in READY state until master indicates not ready
+                    if (!master_ready) begin
+                        state <= IDLE;
+                    end
+                end
+                default: state <= IDLE;  // Default case
+            endcase
+        end
+    end
 endmodule
